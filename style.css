@@ -171,6 +171,15 @@ a{ color:inherit; text-decoration:none; }
   border-color:var(--border-strong);
 }
 .btn-ghost:hover{ border-color:var(--violet); color:#fff; background:var(--violet-soft); transform:translateY(-3px); }
+.btn-linkedin{
+  background:#0A66C2; color:#fff;
+  box-shadow:0 0 0 rgba(10,102,194,0);
+}
+.btn-linkedin:hover{
+  transform:translateY(-3px);
+  background:#0c74d9;
+  box-shadow:0 12px 34px rgba(10,102,194,.4);
+}
 .btn-lg{ padding:16px 32px; font-size:1rem; }
 
 /* ══════════ Hero ══════════ */
