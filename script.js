@@ -114,30 +114,6 @@
     revealables.forEach(el => el.classList.add('in-view'));
   }
 
-  /* Barres de compétences animées */
-  const bars = $$('.bar');
-  if ('IntersectionObserver' in window) {
-    const bo = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in-view');
-        obs.unobserve(e.target);
-      });
-    }, { threshold: 0.4 });
-    bars.forEach(b => bo.observe(b));
-  } else {
-    bars.forEach(b => b.classList.add('in-view'));
-  }
-
-  /* ─────────── 6. Halo lumineux sur les cartes ─────────── */
-  $$('.mini-card').forEach(card => {
-    card.addEventListener('pointermove', e => {
-      const r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-    });
-  });
-
   /* ─────────── 8. Données GitHub en direct ─────────── */
   const USER = 'Morad-Hamdan';
   const fmt = n => (n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'k' : String(n));
@@ -150,7 +126,6 @@
       ]);
       if (!uRes.ok || !rRes.ok) return;
 
-      const user = await uRes.json();
       const repos = await rRes.json();
 
       // ── Stats par projet ──
