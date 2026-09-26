@@ -35,7 +35,6 @@
 <!-- ═══════════ Canvas d'arrière-plan ═══════════ -->
 <canvas id="bg-canvas"></canvas>
 <div class="grid-overlay"></div>
-<div class="noise"></div>
 
 <!-- ═══════════ Navigation ═══════════ -->
 <header class="nav" id="nav">
@@ -46,7 +45,6 @@
 
     <nav class="nav-links" id="navLinks">
       <a href="#accueil" class="nav-link active">Accueil</a>
-      <a href="#apropos" class="nav-link">À propos</a>
       <a href="#projets" class="nav-link">Projets</a>
       <a href="#competences" class="nav-link">Compétences</a>
       <a href="#contact" class="nav-link">Contact</a>
@@ -69,8 +67,6 @@
   <div class="container hero-grid">
 
     <div class="hero-content" data-reveal>
-      <p class="eyebrow"><span class="dot"></span> Bienvenue sur mon portfolio</p>
-
       <h1 class="hero-title">
         Salut, je suis <span class="gradient-text">Mor@D</span>
       </h1>
@@ -93,12 +89,6 @@
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a href="#contact" class="btn btn-ghost">Me contacter</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="hstat"><b id="statRepos">—</b><span>dépôts</span></div>
-        <div class="hstat"><b id="statStars">—</b><span>étoiles</span></div>
-        <div class="hstat"><b id="statSince">—</b><span>sur GitHub</span></div>
       </div>
     </div>
 
@@ -124,72 +114,6 @@
       </div>
     </div>
 
-  </div>
-
-  <a href="#apropos" class="scroll-hint" aria-label="Défiler vers le bas">
-    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
-  </a>
-</section>
-
-<!-- ═══════════ À PROPOS ═══════════ -->
-<section class="section" id="apropos">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="section-tag">// à propos</span>
-      <h2 class="section-title">Qui suis-je ?</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text" data-reveal>
-        <p>
-          Je suis <strong>Morad Hamdan</strong>, développeur logiciel. Ce que je
-          construis repose sur une idée simple : <em>chaque couche doit faire
-          exactement une chose, et la faire bien.</em>
-        </p>
-        <p>
-          Mon projet de référence, <a href="https://github.com/Morad-Hamdan/assistant-pps" target="_blank" rel="noopener">Assistant&nbsp;PPS</a>,
-          est une plateforme de pilotage RH qui transforme un fichier Excel brut en
-          tableau de bord interactif. Elle repose sur une <strong>architecture
-          3-tiers découplée</strong> — FastAPI pour la logique métier, Laravel pour
-          le rendu, SQLite pour la persistance — et une règle métier pure,
-          déterministe et auditée.
-        </p>
-        <p>
-          J'aime les projets où la donnée devient une <strong>décision</strong> :
-          automatisation, tableaux de bord, détection d'incohérences.
-        </p>
-
-        <ul class="about-facts">
-          <li><span class="fact-k">Focus</span><span class="fact-v">Python · PHP · Web</span></li>
-          <li><span class="fact-k">Approche</span><span class="fact-v">Architecture découplée</span></li>
-          <li><span class="fact-k">Base</span><span class="fact-v">Règles métier déterministes</span></li>
-          <li><span class="fact-k">Dispo</span><span class="fact-v">Ouvert aux collaborations</span></li>
-        </ul>
-      </div>
-
-      <div class="about-cards" data-reveal data-delay="150">
-        <article class="mini-card">
-          <div class="mini-icon">⚡</div>
-          <h3>Performance</h3>
-          <p>Indexes SQLite, requêtes ciblées, pages légères. La vitesse n'est pas un détail.</p>
-        </article>
-        <article class="mini-card">
-          <div class="mini-icon">🧩</div>
-          <h3>Architecture</h3>
-          <p>Séparation stricte données / service / API / interface. Changer une couche sans casser les autres.</p>
-        </article>
-        <article class="mini-card">
-          <div class="mini-icon">🔍</div>
-          <h3>Clarté</h3>
-          <p>Un README qui explique, un nom de variable qui parle, un rapport d'audit qui alerte.</p>
-        </article>
-        <article class="mini-card">
-          <div class="mini-icon">🚀</div>
-          <h3>Automatisation</h3>
-          <p>Scripts 1-clic : de la machine vierge à l'application lancée, sans configuration manuelle.</p>
-        </article>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -275,35 +199,6 @@
         </div>
       </article>
 
-      <!-- Projet 3 -->
-      <article class="project" data-reveal data-delay="200">
-        <div class="project-head">
-          <div>
-            <h3 class="project-name">Superpowers</h3>
-            <p class="project-desc">
-              Cadre de compétences agentic &amp; méthodologie de développement logiciel.
-              Dépôt <em>fork</em> suivi de près.
-            </p>
-          </div>
-          <div class="project-lang project-lang-fork">⑂ fork</div>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Méthodologie</span><span class="tag">Agentic</span><span class="tag">Framework</span>
-        </div>
-
-        <div class="project-foot">
-          <div class="project-stats">
-            <span class="pstat" data-star-for="superpowers">★ <b>—</b></span>
-            <span class="pstat" data-lang-for="superpowers">⑂ <b>—</b></span>
-          </div>
-          <a class="project-link" href="https://github.com/Morad-Hamdan/superpowers" target="_blank" rel="noopener">
-            Voir le dépôt
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-          </a>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>
@@ -357,14 +252,6 @@
       </div>
 
     </div>
-
-    <!-- Barres de compétences -->
-    <div class="bars" data-reveal>
-      <div class="bar"><div class="bar-head"><span>Python</span><span class="bar-pct">90%</span></div><div class="bar-track"><i style="--w:90%"></i></div></div>
-      <div class="bar"><div class="bar-head"><span>PHP / Laravel</span><span class="bar-pct">85%</span></div><div class="bar-track"><i style="--w:85%"></i></div></div>
-      <div class="bar"><div class="bar-head"><span>Architecture &amp; SQL</span><span class="bar-pct">80%</span></div><div class="bar-track"><i style="--w:80%"></i></div></div>
-      <div class="bar"><div class="bar-head"><span>Front-end (Blade / Tailwind)</span><span class="bar-pct">75%</span></div><div class="bar-track"><i style="--w:75%"></i></div></div>
-    </div>
   </div>
 </section>
 
@@ -388,14 +275,6 @@
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
           LinkedIn
         </a>
-        <a href="https://github.com/Morad-Hamdan?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-          Tous mes dépôts
-        </a>
-      </div>
-
-      <div class="contact-cmd">
-        <code><span class="t-prompt">➜</span> git clone https://github.com/Morad-Hamdan/assistant-pps.git</code>
-        <button class="copy-btn" id="copyBtn" aria-label="Copier la commande">Copier</button>
       </div>
     </div>
   </div>

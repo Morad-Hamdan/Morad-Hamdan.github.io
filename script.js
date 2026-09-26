@@ -138,31 +138,6 @@
     });
   });
 
-  /* ─────────── 7. Bouton copier ─────────── */
-  const copyBtn = $('#copyBtn');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', async () => {
-      const cmd = $('code', copyBtn.closest('.contact-cmd'))?.textContent.trim();
-      if (!cmd) return;
-      try {
-        await navigator.clipboard.writeText(cmd);
-      } catch {
-        const ta = document.createElement('textarea');
-        ta.value = cmd; document.body.appendChild(ta);
-        ta.select(); document.execCommand('copy'); ta.remove();
-      }
-      const old = copyBtn.textContent;
-      copyBtn.textContent = 'Copié ✓';
-      copyBtn.style.background = 'var(--cyan)';
-      copyBtn.style.color = '#04070C';
-      setTimeout(() => {
-        copyBtn.textContent = old;
-        copyBtn.style.background = '';
-        copyBtn.style.color = '';
-      }, 1800);
-    });
-  }
-
   /* ─────────── 8. Données GitHub en direct ─────────── */
   const USER = 'Morad-Hamdan';
   const fmt = n => (n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'k' : String(n));
@@ -177,17 +152,6 @@
 
       const user = await uRes.json();
       const repos = await rRes.json();
-
-      // ── Stats du hero ──
-      const own = repos.filter(r => !r.fork);
-      const stars = repos.reduce((s, r) => s + r.stargazers_count, 0);
-
-      setText('#statRepos',  String(user.public_repos));
-      setText('#statStars',  fmt(stars));
-
-      const since = new Date(user.created_at);
-      const months = (Date.now() - since.getTime()) / (1000 * 60 * 60 * 24 * 30.44);
-      setText('#statSince', (months >= 12 ? Math.round(months / 12) + ' ans' : Math.round(months) + ' mois'));
 
       // ── Stats par projet ──
       const byName = Object.fromEntries(repos.map(r => [r.name, r]));
