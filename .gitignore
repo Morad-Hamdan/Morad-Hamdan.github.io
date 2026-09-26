@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────
+#  Portfolio — exclusions locales
+# ─────────────────────────────────────────────
+
+# Harnais de test desktop (iframe 1400px) — usage dev uniquement
+_test_desktop.html
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
